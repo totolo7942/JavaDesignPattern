@@ -5,7 +5,6 @@ import observer.publisher.FacebookPage;
 import observer.subscriper.AppNotificationListener;
 import observer.subscriper.EmailNotificationListener;
 
-@Log4j2
 public class ObserverPatternApp {
 
     public static void main(String[] args) {
