@@ -1,4 +1,4 @@
-package observer;
+package behavioral_design_pattern.observer;
 
 
 public class FacebookUser {
