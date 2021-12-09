@@ -11,8 +11,9 @@ public class EventListener {
 
     public EventListener(String ... eventType) {
         this.events = new LinkedHashMap<>();
-        for(String type : eventType)
+        for(String type : eventType) {
             events.put(type, new ArrayList<>());
+        }
     }
 
     public void subscribe(String eventType, IEventListener iEventListener) {
@@ -27,8 +28,9 @@ public class EventListener {
 
     public void notify(String eventType, String displayName, String url) {
         List<IEventListener> users =  this.events.get(eventType);
-        for (IEventListener listener : users)
+        for (IEventListener listener : users) {
             listener.update(eventType, displayName, url);
+        }
     }
 
 }

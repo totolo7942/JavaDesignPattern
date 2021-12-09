@@ -1,5 +1,8 @@
 package behavioral_design_pattern.strategy;
 
+/**
+ * @author a1101381
+ */
 public class StrategyPatternMain {
 
     // client code here
@@ -8,7 +11,7 @@ public class StrategyPatternMain {
     }
 
     public static void main( String[] args ) {
-        Strategy[] algorithms = {new FOO(), new BAR()};
+        Strategy[] algorithms = {new Foo(), new Bar()};
         for (Strategy algorithm : algorithms) {
             execute(algorithm);
         }
@@ -21,8 +24,9 @@ interface Strategy {
 }
 
 // 2. Bury implementation
-abstract class StrategySolution implements Strategy {
+abstract class AbstractStrategySolution implements Strategy {
     // 3. Template Method
+    @Override
     public void solve() {
         start();
         while (nextTry() && !isSolution()) {}
@@ -36,8 +40,9 @@ abstract class StrategySolution implements Strategy {
 }
 
 // 2. Bury implementation
-abstract class StrategySearch implements Strategy {
+abstract class AbstractStrategySearch implements Strategy {
     // 3. Template Method
+    @Override
     public void solve() {
         while (true) {
             preProcess();
@@ -53,22 +58,26 @@ abstract class StrategySearch implements Strategy {
     abstract void postProcess();
 }
 
-class FOO extends StrategySolution {
+class Foo extends AbstractStrategySolution {
     private int state = 1;
 
+    @Override
     protected void start() {
         System.out.println("Start  ");
     }
 
+    @Override
     protected void stop() {
         System.out.println("Stop");
     }
 
+    @Override
     protected boolean nextTry() {
         System.out.println("NextTry-" + state++ + "  ");
         return true;
     }
 
+    @Override
     protected boolean isSolution() {
         System.out.println("IsSolution-" + (state == 3) + "  ");
         return (state == 3);
@@ -76,17 +85,20 @@ class FOO extends StrategySolution {
 }
 
 
-class BAR extends StrategySearch {
+class Bar extends AbstractStrategySearch {
     private int state = 1;
 
+    @Override
     protected void preProcess()  {
         System.out.println("PreProcess  ");
     }
 
+    @Override
     protected void postProcess() {
         System.out.println("PostProcess  ");
     }
 
+    @Override
     protected boolean search() {
         System.out.println("Search-" + state++ + "  ");
         return state == 3;
