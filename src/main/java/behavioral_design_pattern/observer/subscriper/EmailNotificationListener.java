@@ -1,7 +1,7 @@
-package observer.subscriper;
+package behavioral_design_pattern.observer.subscriper;
 
-import observer.FacebookUser;
-import observer.publisher.IEventListener;
+import behavioral_design_pattern.observer.FacebookUser;
+import behavioral_design_pattern.observer.publisher.IEventListener;
 
 public class EmailNotificationListener implements IEventListener {
 

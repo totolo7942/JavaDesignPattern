@@ -1,9 +1,8 @@
-package observer;
+package behavioral_design_pattern.observer;
 
-import lombok.extern.log4j.Log4j2;
-import observer.publisher.FacebookPage;
-import observer.subscriper.AppNotificationListener;
-import observer.subscriper.EmailNotificationListener;
+import behavioral_design_pattern.observer.publisher.FacebookPage;
+import behavioral_design_pattern.observer.subscriper.AppNotificationListener;
+import behavioral_design_pattern.observer.subscriper.EmailNotificationListener;
 
 public class ObserverPatternApp {
 

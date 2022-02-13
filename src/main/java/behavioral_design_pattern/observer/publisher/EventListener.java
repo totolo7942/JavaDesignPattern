@@ -1,4 +1,4 @@
-package observer.publisher;
+package behavioral_design_pattern.observer.publisher;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

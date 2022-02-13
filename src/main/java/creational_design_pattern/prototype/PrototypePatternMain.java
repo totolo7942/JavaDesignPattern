@@ -1,4 +1,4 @@
-package creational_design_pattern;
+package creational_design_pattern.prototype;
 
 /**
  * Creational Pattern : https://arunprashanth6.medium.com/a-complete-guide-on-design-pattern-in-java-2b80fbf088ce

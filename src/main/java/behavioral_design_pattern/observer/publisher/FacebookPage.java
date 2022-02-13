@@ -1,6 +1,6 @@
-package observer.publisher;
+package behavioral_design_pattern.observer.publisher;
 
-import observer.FollowType;
+import behavioral_design_pattern.observer.FollowType;
 
 public class FacebookPage {
 
