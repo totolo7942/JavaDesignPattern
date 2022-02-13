@@ -20,10 +20,6 @@ public class CommandPatternMain {
     }
 }
 
-interface Command {
-    abstract void execute();
-}
-
 final class Button {
     Command command;
 
@@ -42,6 +38,11 @@ final class Button {
     public void pressed() {
         command.execute();
     }
+}
+
+
+interface Command {
+    void execute();
 }
 
 class Lamb {

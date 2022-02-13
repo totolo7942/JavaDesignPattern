@@ -4,8 +4,8 @@ import observer.FollowType;
 
 public class FacebookPage {
 
-    private String displayName;
-    private EventListener eventManager;
+    private final String displayName;
+    private final EventListener eventManager;
 
     public FacebookPage(String displayName) {
         this.displayName = displayName;
